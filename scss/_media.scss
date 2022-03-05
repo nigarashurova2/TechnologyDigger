@@ -1,0 +1,12 @@
+@media screen and (max-width: 992px) {
+    body{
+        header{
+           width: 100%;
+           display: flex;
+           justify-content: space-between;
+            nav{
+                display: none;
+            }
+        }
+    }
+}

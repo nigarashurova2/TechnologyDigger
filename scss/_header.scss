@@ -1,0 +1,124 @@
+header {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  display: flex;
+  line-height: 80px;
+  background-color: rgba($color: #333333, $alpha: .6);
+
+  .logo {
+    display: flex;
+    justify-content: center;
+    width: 20%;
+    background-color: white;
+    line-height: 100%;
+    padding: 40px;
+    box-sizing: border-box;
+    img {
+      width: 80%;
+    }
+  }
+
+  nav {
+    width: 60%;
+    text-align: center !important;
+    ul {
+      display: flex;
+      justify-content: center;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      a {
+        text-decoration: none;
+        color: white;
+        display: block;
+        padding: 10px;
+        font-weight: 600;
+        font-family: Arial, Helvetica, sans-serif;
+        transition: all .5s ease-out;
+        &:hover {
+          color: #baa08f;
+          position: relative;
+          &::before {
+            content: "";
+            position: absolute;
+            left: 50%;
+            top: 10px;
+            width: 2px;
+            height: 20px;
+            background-color: #baa08f;
+            transition: all .4s ease;
+           
+          }
+        }
+      }
+
+      .active {
+        color: #baa08f;
+        position: relative;
+        &::before {
+          content: "";
+          position: absolute;
+          left: 50%;
+          top: 10px;
+          width: 2px;
+          height: 20px;
+          background-color: #baa08f;
+        
+        }
+      }
+    }
+  }
+
+  .header-right {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    width: 20% !important;
+    text-align: center;
+    line-height: 100%;
+    cursor: pointer;
+    .search {
+      width: 50%;
+
+      i {
+        transition: all 0.4s ease-out;
+        font-size: 24px;
+        color: white;
+        &:hover {
+          color: #baa08f;
+        }
+      }
+    }
+    .button {
+      width: 50%;
+      line-height: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: #baa08f;
+      &:hover {
+        span {
+          &:nth-child(2) {
+            width: 30px !important ;
+          }
+        }
+      }
+      .button-content {
+        span {
+          transition: all 0.5s ease-out;
+          display: block;
+          width: 30px;
+          height: 3px;
+          background-color: white;
+          margin: 3px 0;
+          &:nth-child(2) {
+            width: 18px;
+          }
+        }
+      }
+    }
+  }
+}
